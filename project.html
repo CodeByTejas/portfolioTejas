@@ -1,241 +1,509 @@
- <!--doctype html-->
- <html>
-    <head>
-        <style>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link
+      rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-             
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: poppins;
-    box-sizing: border-box;
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <style>
+/* footer */
+
+#footer .twitter {
+  background-image: url(http://manstyle.coralixthemes.com/dark/img/dark/icons/footer-icons.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
-a{
-    text-decoration: none;
+#footer .linkedin {
+  background-image: url(http://manstyle.coralixthemes.com/dark/img/dark/icons/footer-icons.png);
+  background-repeat: no-repeat;
+  background-position: -78px 0;
 }
-ul{
-    list-style: none;
+#footer .facebook {
+  background-image: url(http://manstyle.coralixthemes.com/dark/img/dark/icons/footer-icons.png);
+  background-repeat: no-repeat;
+  background-position: -233px 0;
 }
-body{
-    margin: 0px;
-    padding: 0px;
-    font-family: poppins;
- /* background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%); */
- background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );
+#footer .skype {
+  background-image: url(http://manstyle.coralixthemes.com/dark/img/dark/icons/footer-icons.png);
+  background-repeat: no-repeat;
+  background-position: -156px 0;
 }
-#project{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 50px 0px;
+#footer .github {
+  background-image: url(http://manstyle.coralixthemes.com/dark/img/dark/icons/footer-icons.png);
+  background-repeat: no-repeat;
+  background-position: -310px 0;
 }
-.project-heading{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
+#footer a {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 30px;
 }
-.project-heading h3{
-    font-size: 2.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
+#footer a:hover {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
 }
-.project-heading span{
-    color: #f33c3c;
-    font-size: 1.5rem;
+#footer .twitter:hover {
+  background-position: 0 -56px;
 }
-.portfolio-filter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    border: 1px solid rgb(237, 237, 237,0.6);
-    flex-wrap: wrap;
-    margin: 20px;
+#footer .facebook:hover {
+  background-position: -233px -56px;
 }
-.portfolio-filter li{
-    margin: 10px;
-    padding: 5px 20px;
-    color: #9b9b9b;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-    font-weight: 400;
-    cursor: pointer;
-    user-select: none;
+#footer .skype:hover {
+  background-position: -156px -56px;
 }
-.portfolio-filter-active{
-    background-color: #f0f0f0;
-    color: #272727 !important;
+#footer .linkedin:hover {
+  background-position: -78px -56px;
 }
-.portfolio-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: auto;
+#footer .flickr:hover {
+  background-position: -310px -56px;
 }
-.portfolio-box{
-    width:330px;
-    padding: 15px;
-    border: 1px solid #eeeeee;
-    margin: 20px;
-   
+.bg-dark-1{
+  background-color: #FF3CAC;
+background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+ 
 }
  
-.portfolio-box img{
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    overflow: hidden;
-}
- 
-@media(max-width:740px){
-.portfolio-filter{
-    background-color: #f9f9f9;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-.portfolio-filter-active{
-    background-color: #ffffff;
-    border: 1px solid rgb(219, 219, 219);
-}
-.portfolio-box{
-    width:80%;
-}
-}
-@media(max-width:550px){
- 
-    .project-heading h3
-    {
-        font-size: 1.8rem;
+
+
+
+
+      /* Global styles */
+      .navbar {
+        position: -webkit-sticky;
+        width: 100%;
+        z-index: 99;
+        padding: 10px 0;
+        font-family: "Ubuntu", sans-serif;
+        transition: all 0.3s ease;
+      }
+
+      .navbar.sticky {
+        padding: 15px 0;
+        background: rgb(45, 45, 136);
+      }
+
+      .navbar .max-width {
+        display: inline-flex;
+        align-items: right;
+        justify-content: space-between;
+      }
+
+      .navbar {
+        /* background-color: #38a1db; */
+        background-color: #FF3CAC;
+background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+        color: #fff;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      .navbar .logo a span {
+        color: rgb(20, 130, 220);
+        transition: all 0.3s ease;
+      }
+
+      .navbar.sticky .logo a span {
+        color: #fff;
+      }
+
+      .navbar .menu li {
+        list-style: none;
+        display: inline-block;
+      }
+
+      .navbar .menu li a {
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 25px;
+        transition: color 0.3s ease;
+      }
+
+      .navbar .menu li a:hover {
+        color: crimson;
+      }
+
+      .navbar.sticky .menu li a:hover {
+        color: #fff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Section styles */
+      section {
+        padding: 40px 0;
+      }
+
+      section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Image and video gallery styles */
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+      }
+
+      .image-item img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+      }
+
+      .video-item img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Left and Right Sections */
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .container .left-section,
+      .container .right-section {
+        flex-basis: 50%;
+      }
+
+      .container .left-section {
+        order: 1;
+        border-right: 5px solid #ddd;
+        padding-right: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+        border-top: 5px solid #ddd;
+        padding-top: 20px;
+        border-left: 5px solid #ddd;
+        margin-bottom: 20px;
+        border-bottom: 5px solid #ddd;
+        padding-bottom: 20px;
+        background-color: #dbf0ff;
+      }
+
+      .container .right-section {
+        margin-bottom: 20px;
+        border-bottom: 5px solid #ddd;
+        border-right: 5px solid #ddd;
+        border-left: 5px solid #ddd;
+
+        padding-bottom: 20px;
+        margin-top: 20px;
+        border-top: 5px solid #ddd;
+        padding-top: 20px;
+        order: 2;
+        background-color: #dbf0ff;
+      }
+
+      #image-gallery img{
+        width: 70%;
+        height: 70%;
+      }
+    .title-project{
+      font-size: x-large;
     }
-}
-a{
-    color: yellowgreen;
-    font-weight: 800;
-}
+ 
+    </style>
+  </head>
 
-p, h1, h2, h3, h4{
-    font-size: x-large;
-    color: #ffffff;
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="menu">
+          <li>
+            <a href="project.html" class="menu-btn"><h4>Project Section</h4></a>
+          </li>
+          <li class="home-btn">
+            <a href="index.html" class="menu-btn"><h4>Home</h4></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-}
+    <div class="container">
+      <div class="left-section">
+        <section id="project-details">
+          <div class="container">
+            <!-- <h2>r</h2> -->
+            <p> <strong class="title-project">Touchless Hand Sanitizer Dispense</strong> <br>
+              <strong>Description:</strong>  <br>
+              The Touchless Hand Sanitizer Dispenser with Infrared Sensor is a project aimed at providing a hygienic and convenient solution for hand sanitization in various environments. This project incorporates an infrared sensor-based system that detects hand movements and dispenses hand
+               sanitizer without the need for physical contact, minimizing the risk of spreading germs and viruses.</p>
+            <p> <strong>Technologies used:</strong> <br> 
+             Infrared Sensor, suction motorpump, battery , small pipe, container
+              
+            </p>
+          </div>
+        </section>
 
-.portfolio-filter{
-    font-size: x-large;
-    color: #eeeeee;
-}
+        <section id="image-gallery">
+          <div class="container">
+            <!-- <h2>Image Gallery</h2> -->
+            <div class="image-grid">
+              <div class="image-item">
+                <img src="images/project1.PNG" alt="Project Image" />
+              </div>
+              <!-- <div class="image-item">
+                <img src="images/project2.PNG" alt="Project Image" />
+              </div> -->
+              <!-- Add more image items as needed -->
+            </div>
+          </div>
+        </section>
 
-img{
-    width: 50%;    
-    height: 50%;
-}
-
-/* footer section styling */
-footer{
-    background: #111;
-    padding: 15px 23px;
-    color: #fff;
-    text-align: center;
-}
-footer span a{
-    color: crimson;
-    text-decoration: none;
-}
-footer span a:hover{
-    text-decoration: underline;
-}
-
-
-        </style>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <title>Portfolio Section</title>
-    
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    
-    <link rel="stylesheet" href="css/lightbox.min.css">
-    
-    <link rel="shortcut icon" href="images/fav-icon.png"/>
-    
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <!--===Project-Section======================-->
-      <section id="project">
-        <!--heading--------------->
-        <div class="project-heading">
-          <span>Let's See My Work</span>
-          <h3>MY PROJECTS</h3>
-        </div>
-      <!--container--------->
-      <div class="portfolio-container">
-        <!--1------------>
-        <a href="images/b-1.jpg" class="portfolio-box app" data-lightbox="work">
-          <img src="images/project1.PNG" alt="" style="width: 250px; height: 250px;">
-          <p>Touchless Hand Sanitizer Project which  I made during lockdown period(IoT).</p>
-        </a>
-        <!--2------------>
-        <a href="images/b-2.jpg" class="portfolio-box app" data-lightbox="work">
-          <img src="images/project2.PNG" alt="" style="width: 250px; height: 250px;">
-          <p>Multi axis servo Control Using Joystick in x-y-z direction(mini-project)(IoT).</p>
-        </a>
-        <!--3------------>
-        <a href="images/b-3.jpg" class="portfolio-box appdesign" data-lightbox="work">
-          <img src="images/project3.PNG" alt="" style="width: 250px; height: 250px;">
-          <p>Obstacle Avoiding Robot using Arduino(IoT).</p>
-        </a>
-        <!--4------------>
-        <a href="images/b-4.jpg" class="portfolio-box web" data-lightbox="work">
-          <img src="images/project4.png" alt="" style="width: 300px; height: 300px;">
-          <p>E-learning website(web devops).</p>
-        </a>
-        <a href="images/b-4.jpg" class="portfolio-box web" data-lightbox="work">
-          <img src="images/project5.png" alt="" style="width: 300px; height: 300px;">
-          <p>E-commerce website product section(web devops).</p>
-        </a>
+        <!-- <section id="video-gallery">
+          <div class="container">
+            <h2>Video Gallery</h2>
+            <div class="video-grid">
+              <div class="video-item">
+                <a href="path/to/video1.mp4">
+                  <img
+                    src="path/to/video1-thumbnail.jpg"
+                    alt="Video Thumbnail"
+                  />
+                </a>
+              </div>
+              <div class="video-item">
+                <a href="path/to/video2.mp4">
+                  <img
+                    src="path/to/video2-thumbnail.jpg"
+                    alt="Video Thumbnail"
+                  />
+                </a>
+              </div> -->
+              <!-- Add more video items as needed -->
+            <!-- </div>
+          </div>
+        </section> -->
       </div>
-      
-      
-   
 
+      <div class="right-section">
+        <section id="project-details">
+          <div class="container">
+            <!-- <h2>Project Title 2</h2> -->
+            <p> <strong class="title-project">Multi-Axis Servo Control using Joystick</strong> <br>
+              <strong>Description:</strong>  <br>
+              The Multi-Axis Servo Control using Joystick project is a versatile system that allows precise and intuitive control of multiple servo motors using a joystick input. This project provides a user-friendly interface and enables smooth and simultaneous control of servo motors along multiple axes,
+               making it suitable for applications such as robotics, automation, camera control, and remote-controlled systems.</p>
+            <p> <strong>Technologies used:</strong> <br> 
+             2- Servo motor, joystick, Arduino, jumper wires, breadboard/PCB</p>
+          </div>
+        </section>
 
-      
+        <section id="image-gallery">
+          <div class="container">
+            <!-- <h2>Image Gallery</h2> -->
+            <div class="image-grid">
+              <div class="image-item">
+                <img src="images/project2.PNG" alt="Project Image" />
+              </div>
+              <!-- <div class="image-item">
+                <img src="path/to/image2.jpg" alt="Project Image" />
+              </div> -->
+              <!-- Add more image items as needed -->
+            </div>
+          </div>
+        </section>
 
+        <!-- <section id="video-gallery">
+          <div class="container">
+            <h2>Video Gallery</h2>
+            <div class="video-grid">
+              <div class="video-item">
+                <a href="path/to/video1.mp4">
+                  <img
+                    src="path/to/video1-thumbnail.jpg"
+                    alt="Video Thumbnail"
+                  />
+                </a>
+              </div>
+              <div class="video-item">
+                <a href="path/to/video2.mp4">
+                  <img
+                    src="path/to/video2-thumbnail.jpg"
+                    alt="Video Thumbnail"
+                  />
+                </a>
+              </div> -->
+              <!-- Add more video items as needed -->
+            <!-- </div>
+          </div>
+        </section> -->
+      </div>
+    </div>
+    <div class="container">
+      <div class="left-section">
+        <section id="project-details">
+          <div class="container">
+            <!-- <h2>Project Title 3</h2> -->
+            <p> <strong class="title-project">Obstacle Avoiding Robot</strong> <br>
+              <strong>Description:</strong>  <br>
+              The Obstacle Avoiding Robot is an intelligent and autonomous robotic system designed to navigate through its environment while avoiding obstacles in its path. This project incorporates sensors and control mechanisms to enable the robot to 
+              detect obstacles, make real-time decisions, and maneuver around them to ensure safe and efficient traversal.</p>
+            <p> <strong>Technologies used:</strong> <br> 
+             Servo motor, ultrasoonic sensor, Arduino, jumper wires, breadboard/PCB, two motors with wheel , motor shield</p>
+          </div>
+        </section>
 
+        <section id="image-gallery">
+          <div class="container">
+            <!-- <h2>Image Gallery</h2> -->
+            <div class="image-grid">
+              <div class="image-item">
+                <img src="images/project3.PNG" alt="Project Image" />
+              </div>
+              <!-- <div class="image-item">
+                <img src="path/to/image2.jpg" alt="Project Image" />
+              </div> -->
+              <!-- Add more image items as needed -->
+            </div>
+          </div>
+        </section>
 
-     <!--js---------------------------------->
-<script src="js/JQuery.js"></script>
-<script src="js/lightbox.min.js"></script>
-<script>
-    /*blog-filter-menu----------------------------*/
-    $(document).on('click', '.portfolio-filter li', function () {
-        $(this).addClass('portfolio-filter-active').siblings().removeClass('portfolio-filter-active')
-    });
+        <!-- <section id="video-gallery">
+          <div class="container">
+            <h2>Video Gallery</h2>
+            <div class="video-grid">
+              <div class="video-item">
+                <a href="path/to/video1.mp4">
+                  <img
+                    src="path/to/video1-thumbnail.jpg"
+                    alt="Video Thumbnail"
+                  />
+                </a>
+              </div>
+              <div class="video-item">
+                <a href="path/to/video2.mp4">
+                  <img
+                    src="path/to/video2-thumbnail.jpg"
+                    alt="Video Thumbnail"
+                  />
+                </a>
+              </div> -->
+              <!-- Add more video items as needed -->
+            <!-- </div>
+          </div>
+        </section> -->
+      </div>
 
-    /*portfolio-filter---------------------------------*/
-    $(document).ready(function () {
-        $('.list').click(function () {
-            const value = $(this).attr('data-filter');
-            if (value == 'all') {
-                $('.portfolio-box').show('1000');
-            } else {
-                $('.portfolio-box').not('.' + value).hide('1000');
-                $('.portfolio-box').filter('.' + value).show('1000');
-            }
-        });
-    });
+      <div class="right-section">
+        <section id="project-details">
+          <div class="container">
+            <!-- <h2>Project Title 4</h2> -->
+            <p> <strong class="title-project">E-Learning Website</strong> <br>
+              <strong>Description:</strong>  <br>
+              The E-Learning Website is an online platform designed to provide a comprehensive and interactive learning experience for users across various subjects and disciplines. This project aims to bridge the gap between traditional classroom education and remote 
+              learning by offering a user-friendly and engaging online environment for students, teachers, and learners of all ages.</p>
+            <p> <strong>Technologies used:</strong> <br> 
+             HTML, CSS, JAVASCRIPT</p>
+          </div>
+        </section>
 
-   
+        <section id="image-gallery">
+          <div class="container">
+            <!-- <h2>Image Gallery</h2> -->
+            <div class="image-grid">
+              <div class="image-item">
+                <img src="images/project4.png" alt="Project Image" style="height: 100%; width: 100%;" />
+              </div>
 
+              <br>
+              <div class="image-item">
+                <img src="images/project4.1.png" alt="Project Image" style="height: 100%; width: 100%;" />
+              </div>
+            <br>
+              <div class="image-item">
+                <img src="images/project4.2.png" alt="Project Image" style="height: 100%; width: 100%;" />
+              </div>
+              <br>
+              <div class="image-item">
+                <img src="images/project4.3.png" alt="Project Image" style="height: 100%; width: 100%;" />
+              </div>
+              <!-- Add more image items as needed -->
+            </div>
+          </div>
+        </section>
 
-      </script>
+        <!-- <section id="video-gallery">
+          <div class="container">
+            <h2>Video Gallery</h2>
+            <div class="video-grid">
+              <div class="video-item">
+                <a href="path/to/video1.mp4">
+                  <img
+                    src="path/to/video1-thumbnail.jpg"
+                    alt="Video Thumbnail"
+                  />
+                </a>
+              </div>
+              <div class="video-item">
+                <a href="path/to/video2.mp4">
+                  <img
+                    src="path/to/video2-thumbnail.jpg"
+                    alt="Video Thumbnail"
+                  />
+                </a>
+              </div> -->
+              <!-- Add more video items as needed -->
+            <!-- </div>
+          </div>
+        </section> -->
+      </div>
+    </div>
 
-      <footer>
-        <span>Created By <a href="https://www.linkedin.com/in/tejas-gupta-2bb4071b8/">Tejas Gupta</a> | <span class="far fa-copyright"></span> 2023 @copyright reserved.</span>
-    </footer>
-    </body>
-    </html>
+<footer class="bg-dark-1">
+  <section id="footer" class="py-5">
+    <div class="container text-center">
+      <a href="https://twitter.com/TejasGu08289421?t=V5Ks0yxjjNvea1zu_SxYmA&s=09" class="twitter"></a>
+      <a href="https://www.linkedin.com/in/tejas-gupta-2bb4071b8/" class="linkedin"></a>
+      <a href="https://linktr.ee/tejas86" class="facebook"></a>
+      <a href="https://github.com/CodeByTejas" class="github"></a>
+
+      <h6 class="m-0 mt-4 text-center text-white text-capitalize">Copyright &copy; 2023 designed by Tejas Gupta</h6>
+    </div>
+  </section>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      // Animation code or additional JavaScript code can be added here
+    </script>
+  </body>
+</html>
