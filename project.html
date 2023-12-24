@@ -1,525 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
-    <link
-      rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <style>
-/* footer */
-
-#footer .twitter {
-  background-image: url(http://manstyle.coralixthemes.com/dark/img/dark/icons/footer-icons.png);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-#footer .linkedin {
-  background-image: url(http://manstyle.coralixthemes.com/dark/img/dark/icons/footer-icons.png);
-  background-repeat: no-repeat;
-  background-position: -78px 0;
-}
-#footer .facebook {
-  background-image: url(http://manstyle.coralixthemes.com/dark/img/dark/icons/footer-icons.png);
-  background-repeat: no-repeat;
-  background-position: -233px 0;
-}
-#footer .skype {
-  background-image: url(http://manstyle.coralixthemes.com/dark/img/dark/icons/footer-icons.png);
-  background-repeat: no-repeat;
-  background-position: -156px 0;
-}
-#footer .github {
-  background-image: url(http://manstyle.coralixthemes.com/dark/img/dark/icons/footer-icons.png);
-  background-repeat: no-repeat;
-  background-position: -310px 0;
-}
-#footer a {
-  height: 50px;
-  width: 50px;
-  display: inline-block;
-  margin: 10px;
-  border-radius: 30px;
-}
-#footer a:hover {
-  transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-}
-#footer .twitter:hover {
-  background-position: 0 -56px;
-}
-#footer .facebook:hover {
-  background-position: -233px -56px;
-}
-#footer .skype:hover {
-  background-position: -156px -56px;
-}
-#footer .linkedin:hover {
-  background-position: -78px -56px;
-}
-#footer .flickr:hover {
-  background-position: -310px -56px;
-}
-.bg-dark-1{
-  background-color: #FF3CAC;
-background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
- 
-}
- 
-
-
-
-
-      /* Global styles */
-      .navbar {
-        position: -webkit-sticky;
-        width: 100%;
-        z-index: 99;
-        padding: 10px 0;
-        font-family: "Ubuntu", sans-serif;
-        transition: all 0.3s ease;
-      }
-
-      .navbar.sticky {
-        padding: 15px 0;
-        background: rgb(45, 45, 136);
-      }
-
-      .navbar .max-width {
-        display: inline-flex;
-        align-items: right;
-        justify-content: space-between;
-      }
-
-      .navbar {
-        /* background-color: #38a1db; */
-        background-color: #FF3CAC;
-background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
-        color: #fff;
-        color: #fff;
-        font-size: 20px;
-        font-weight: 500;
-      }
-
-      .navbar .logo a span {
-        color: rgb(20, 130, 220);
-        transition: all 0.3s ease;
-      }
-
-      .navbar.sticky .logo a span {
-        color: #fff;
-      }
-
-      .navbar .menu li {
-        list-style: none;
-        display: inline-block;
-      }
-
-      .navbar .menu li a {
-        display: block;
-        color: #fff;
-        font-size: 18px;
-        font-weight: 500;
-        margin-left: 25px;
-        transition: color 0.3s ease;
-      }
-
-      .navbar .menu li a:hover {
-        color: crimson;
-      }
-
-      .navbar.sticky .menu li a:hover {
-        color: #fff;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        text-decoration: none;
-      }
-
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-
-      /* Section styles */
-      section {
-        padding: 40px 0;
-      }
-
-      section h2 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      /* Image and video gallery styles */
-      .image-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        justify-items: center;
-        align-items: center;
-      }
-
-      .image-item img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-      }
-
-      .video-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        justify-items: center;
-        align-items: center;
-      }
-
-      .video-item img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-      }
-
-      /* Left and Right Sections */
-      .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-      }
-
-      .container .left-section,
-      .container .right-section {
-        flex-basis: 50%;
-      }
-
-      .container .left-section {
-        order: 1;
-        border-right: 5px solid #ddd;
-        padding-right: 20px;
-        margin-right: 20px;
-        margin-top: 20px;
-        border-top: 5px solid #ddd;
-        padding-top: 20px;
-        border-left: 5px solid #ddd;
-        margin-bottom: 20px;
-        border-bottom: 5px solid #ddd;
-        padding-bottom: 20px;
-        background-color: #dbf0ff;
-      }
-
-      .container .right-section {
-        margin-bottom: 20px;
-        border-bottom: 5px solid #ddd;
-        border-right: 5px solid #ddd;
-        border-left: 5px solid #ddd;
-
-        padding-bottom: 20px;
-        margin-top: 20px;
-        border-top: 5px solid #ddd;
-        padding-top: 20px;
-        order: 2;
-        background-color: #dbf0ff;
-      }
-
-      #image-gallery img{
-        width: 70%;
-        height: 70%;
-      }
-    .title-project{
-      font-size: x-large;
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
     }
- 
+
+    /* Navigation styles */
+    .navbar {
+      position: -webkit-sticky;
+      width: 100%;
+      z-index: 99;
+      padding: 10px 0;
+      font-family: "Ubuntu", sans-serif;
+      transition: all 0.3s ease;
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .navbar .menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .navbar .menu li {
+      margin: 0 15px;
+    }
+
+    .navbar .menu a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar .menu a:hover {
+      color: #ecf0f1;
+    }
+
+    /* GitHub Projects section styles */
+    #github-projects {
+      background-color: #34495e;
+      padding: 40px 0;
+      text-align: center;
+      flex: 1;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-box {
+      text-align: center;
+      position: relative;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .project-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-box img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Container for text content */
+    .project-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    /* Footer styles */
+    footer {
+      background: linear-gradient(135deg, #8e44ad, #3498db);
+      color: #fff;
+      padding: 20px 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #footer .container {
+      text-align: center;
+    }
+
+    #footer .social-icons a {
+      display: inline-block;
+      margin: 0 15px;
+      height: 40px;
+      width: 40px;
+      background: #fff;
+      border-radius: 50%;
+      line-height: 40px;
+      color: #3498db;
+      transition: background 0.3s ease;
+    }
+
+    #footer .social-icons a:hover {
+      background: #ecf0f1;
+    }
+
+    #footer h6 {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    /* Glowing effect */
+    .glow {
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 10px #3498db, 0 0 20px #3498db, 0 0 30px #3498db;
+      }
+
+      to {
+        box-shadow: 0 0 20px #3498db, 0 0 30px #3498db, 0 0 40px #3498db;
+      }
+    }
+
+    /* Lightbox Styles */
+    .modal-dialog {
+      max-width: 90%;
+    }
+
+    .modal-content {
+      background-color: transparent;
+      border: none;
+    }
+
+    .modal-body {
+      padding: 0;
+    }
+
+    .lightbox-img {
       
-      /* CSS for tablet devices */
-@media screen and (max-width: 768px) {
-  .container {
     width: 100%;
-    padding: 20px;
-  }
-}
+    max-width: 600px; 
+    height: auto;
+  
+    }
+  </style>
+</head>
 
-/* CSS for mobile devices */
-@media screen and (max-width: 480px) {
-  .container {
-    width: 100%;
-    padding: 10px;
-  }
-}
-    </style>
-  </head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="menu">
+        <li>
+          <a href="index.html" class="menu-btn">Home</a>
+        </li>
+        <li class="home-btn">
+          <a href="project.html" class="menu-btn">Projects</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-  <body>
-    <header>
-      <nav class="navbar">
-        <ul class="menu">
-          <li>
-            <a href="project.html" class="menu-btn"><h4>Project Section</h4></a>
-          </li>
-          <li class="home-btn">
-            <a href="index.html" class="menu-btn"><h4>Home</h4></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
+  <section id="github-projects" class="py-5">
     <div class="container">
-      <div class="left-section">
-        <section id="project-details">
-          <div class="container">
-            <!-- <h2>r</h2> -->
-            <p> <strong class="title-project">Touchless Hand Sanitizer Dispense</strong> <br>
-              <strong>Description:</strong>  <br>
-              The Touchless Hand Sanitizer Dispenser with Infrared Sensor is a project aimed at providing a hygienic and convenient solution for hand sanitization in various environments. This project incorporates an infrared sensor-based system that detects hand movements and dispenses hand
-               sanitizer without the need for physical contact, minimizing the risk of spreading germs and viruses.</p>
-            <p> <strong>Technologies used:</strong> <br> 
-             Infrared Sensor, suction motorpump, battery , small pipe, container
-              
-            </p>
+      <h2 class="text-center mb-4">My GitHub Projects</h2>
+      <div class="project-grid">
+        <!-- Project Box 1 -->
+        <div class="project-box glow" data-toggle="modal" data-target="#projectModal1">
+          <img src="images/project1.0.jpeg" alt="Project Image 1" class="lightbox-img">
+          <div class="project-content">
+            <h3>ADVANCE ROBOTIC ARM</h3>
+            <p>Our project showcases a precise robotic arm system, employing 2 MG995R servo motors and 3 mini servo motors for intricate movement control. 
+              Integrated ultrasonic sensors enable efficient object handling based on distance, managed by Arduino Uno for computations and PCA9685 16-channel 
+              servo driver for consistent power distribution.</p>
+            <a href="https://github.com/your-username/project1" target="_blank">View on GitHub</a>
           </div>
-        </section>
+        </div>
 
-        <section id="image-gallery">
-          <div class="container">
-            <!-- <h2>Image Gallery</h2> -->
-            <div class="image-grid">
-              <div class="image-item">
-                <img src="images/project1.PNG" alt="Project Image" />
+        <!-- Project Box 2 -->
+        <div class="project-box glow" data-toggle="modal" data-target="#projectModal2">
+          <img src="images/project2.0.png" alt="Project Image 1" class="lightbox-img">
+          <div class="project-content">
+            <h3>E-Learning Portal</h3>
+            <p>"An advanced e-learning platform with an integrated chatbot, providing personalized course guidance,
+               instant assistance, and interactive learning support for a comprehensive educational experience."</p>
+            <a href="https://github.com/your-username/project2" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+
+        <!-- Add more project boxes as needed -->
+
+        <!-- Lightbox Modals -->
+        <div class="modal fade" id="projectModal1" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel1" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <img src="images/project1.1.jpeg" alt="Project Image 1" class="lightbox-img">
+                <img src="images/project1.0" alt="Project Image 2" class="lightbox-img">
+                <img src="images/project1.2" alt="Project Image 2" class="lightbox-img">
               </div>
-              <!-- <div class="image-item">
-                <img src="images/project2.PNG" alt="Project Image" />
-              </div> -->
-              <!-- Add more image items as needed -->
             </div>
           </div>
-        </section>
+        </div>
 
-        <!-- <section id="video-gallery">
-          <div class="container">
-            <h2>Video Gallery</h2>
-            <div class="video-grid">
-              <div class="video-item">
-                <a href="path/to/video1.mp4">
-                  <img
-                    src="path/to/video1-thumbnail.jpg"
-                    alt="Video Thumbnail"
-                  />
-                </a>
+        <div class="modal fade" id="projectModal2" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel2" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <img src="images/project2.0.png" alt="Project Image 1" class="lightbox-img">
+                <img src="images/project2.2.png" alt="Project Image 2" class="lightbox-img">
+                <img src="images/project2.3.png" alt="Project Image 2" class="lightbox-img">
+                <img src="images/project2.1.png" alt="Project Image 2" class="lightbox-img">
               </div>
-              <div class="video-item">
-                <a href="path/to/video2.mp4">
-                  <img
-                    src="path/to/video2-thumbnail.jpg"
-                    alt="Video Thumbnail"
-                  />
-                </a>
-              </div> -->
-              <!-- Add more video items as needed -->
-            <!-- </div>
-          </div>
-        </section> -->
-      </div>
-
-      <div class="right-section">
-        <section id="project-details">
-          <div class="container">
-            <!-- <h2>Project Title 2</h2> -->
-            <p> <strong class="title-project">Multi-Axis Servo Control using Joystick</strong> <br>
-              <strong>Description:</strong>  <br>
-              The Multi-Axis Servo Control using Joystick project is a versatile system that allows precise and intuitive control of multiple servo motors using a joystick input. This project provides a user-friendly interface and enables smooth and simultaneous control of servo motors along multiple axes,
-               making it suitable for applications such as robotics, automation, camera control, and remote-controlled systems.</p>
-            <p> <strong>Technologies used:</strong> <br> 
-             2- Servo motor, joystick, Arduino, jumper wires, breadboard/PCB</p>
-          </div>
-        </section>
-
-        <section id="image-gallery">
-          <div class="container">
-            <!-- <h2>Image Gallery</h2> -->
-            <div class="image-grid">
-              <div class="image-item">
-                <img src="images/project2.PNG" alt="Project Image" />
-              </div>
-              <!-- <div class="image-item">
-                <img src="path/to/image2.jpg" alt="Project Image" />
-              </div> -->
-              <!-- Add more image items as needed -->
             </div>
           </div>
-        </section>
-
-        <!-- <section id="video-gallery">
-          <div class="container">
-            <h2>Video Gallery</h2>
-            <div class="video-grid">
-              <div class="video-item">
-                <a href="path/to/video1.mp4">
-                  <img
-                    src="path/to/video1-thumbnail.jpg"
-                    alt="Video Thumbnail"
-                  />
-                </a>
-              </div>
-              <div class="video-item">
-                <a href="path/to/video2.mp4">
-                  <img
-                    src="path/to/video2-thumbnail.jpg"
-                    alt="Video Thumbnail"
-                  />
-                </a>
-              </div> -->
-              <!-- Add more video items as needed -->
-            <!-- </div>
-          </div>
-        </section> -->
+        </div>
       </div>
-    </div>
-    <div class="container">
-      <div class="left-section">
-        <section id="project-details">
-          <div class="container">
-            <!-- <h2>Project Title 3</h2> -->
-            <p> <strong class="title-project">Obstacle Avoiding Robot</strong> <br>
-              <strong>Description:</strong>  <br>
-              The Obstacle Avoiding Robot is an intelligent and autonomous robotic system designed to navigate through its environment while avoiding obstacles in its path. This project incorporates sensors and control mechanisms to enable the robot to 
-              detect obstacles, make real-time decisions, and maneuver around them to ensure safe and efficient traversal.</p>
-            <p> <strong>Technologies used:</strong> <br> 
-             Servo motor, ultrasoonic sensor, Arduino, jumper wires, breadboard/PCB, two motors with wheel , motor shield</p>
-          </div>
-        </section>
-
-        <section id="image-gallery">
-          <div class="container">
-            <!-- <h2>Image Gallery</h2> -->
-            <div class="image-grid">
-              <div class="image-item">
-                <img src="images/project3.PNG" alt="Project Image" />
-              </div>
-              <!-- <div class="image-item">
-                <img src="path/to/image2.jpg" alt="Project Image" />
-              </div> -->
-              <!-- Add more image items as needed -->
-            </div>
-          </div>
-        </section>
-
-        <!-- <section id="video-gallery">
-          <div class="container">
-            <h2>Video Gallery</h2>
-            <div class="video-grid">
-              <div class="video-item">
-                <a href="path/to/video1.mp4">
-                  <img
-                    src="path/to/video1-thumbnail.jpg"
-                    alt="Video Thumbnail"
-                  />
-                </a>
-              </div>
-              <div class="video-item">
-                <a href="path/to/video2.mp4">
-                  <img
-                    src="path/to/video2-thumbnail.jpg"
-                    alt="Video Thumbnail"
-                  />
-                </a>
-              </div> -->
-              <!-- Add more video items as needed -->
-            <!-- </div>
-          </div>
-        </section> -->
-      </div>
-
-      <div class="right-section">
-        <section id="project-details">
-          <div class="container">
-            <!-- <h2>Project Title 4</h2> -->
-            <p> <strong class="title-project">E-Learning Website</strong> <br>
-              <strong>Description:</strong>  <br>
-              The E-Learning Website is an online platform designed to provide a comprehensive and interactive learning experience for users across various subjects and disciplines. This project aims to bridge the gap between traditional classroom education and remote 
-              learning by offering a user-friendly and engaging online environment for students, teachers, and learners of all ages.</p>
-            <p> <strong>Technologies used:</strong> <br> 
-             HTML, CSS, JAVASCRIPT</p>
-          </div>
-        </section>
-
-        <section id="image-gallery">
-          <div class="container">
-            <!-- <h2>Image Gallery</h2> -->
-            <div class="image-grid">
-              <div class="image-item">
-                <img src="images/project4.png" alt="Project Image" style="height: 100%; width: 100%;" />
-              </div>
-
-              <br>
-              <div class="image-item">
-                <img src="images/project4.1.png" alt="Project Image" style="height: 100%; width: 100%;" />
-              </div>
-            <br>
-              <div class="image-item">
-                <img src="images/project4.2.png" alt="Project Image" style="height: 100%; width: 100%;" />
-              </div>
-              <br>
-              <div class="image-item">
-                <img src="images/project4.3.png" alt="Project Image" style="height: 100%; width: 100%;" />
-              </div>
-              <!-- Add more image items as needed -->
-            </div>
-          </div>
-        </section>
-
-        <!-- <section id="video-gallery">
-          <div class="container">
-            <h2>Video Gallery</h2>
-            <div class="video-grid">
-              <div class="video-item">
-                <a href="path/to/video1.mp4">
-                  <img
-                    src="path/to/video1-thumbnail.jpg"
-                    alt="Video Thumbnail"
-                  />
-                </a>
-              </div>
-              <div class="video-item">
-                <a href="path/to/video2.mp4">
-                  <img
-                    src="path/to/video2-thumbnail.jpg"
-                    alt="Video Thumbnail"
-                  />
-                </a>
-              </div> -->
-              <!-- Add more video items as needed -->
-            <!-- </div>
-          </div>
-        </section> -->
-      </div>
-    </div>
-
-<footer class="bg-dark-1">
-  <section id="footer" class="py-5">
-    <div class="container text-center">
-      <a href="https://twitter.com/TejasGu08289421?t=V5Ks0yxjjNvea1zu_SxYmA&s=09" class="twitter"></a>
-      <a href="https://www.linkedin.com/in/tejas-gupta-2bb4071b8/" class="linkedin"></a>
-      <a href="https://linktr.ee/tejas86" class="facebook"></a>
-      <a href="https://github.com/CodeByTejas" class="github"></a>
-
-      <h6 class="m-0 mt-4 text-center text-white text-capitalize">Copyright &copy; 2023 designed by Tejas Gupta</h6>
     </div>
   </section>
-</footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      // Animation code or additional JavaScript code can be added here
-    </script>
-  </body>
+  <footer>
+    <div class="container">
+      <div class="social-icons">
+        <a href="https://twitter.com/TejasGu08289421?t=V5Ks0yxjjNvea1zu_SxYmA&s=09" class="twitter"></a>
+        <a href="https://www.linkedin.com/in/tejas-gupta-2bb4071b8/" class="linkedin"></a>
+        <a href="https://linktr.ee/tejas86" class="facebook"></a>
+        <a href="https://github.com/CodeByTejas" class="github"></a>
+      </div>
+      <h6 class="m-0 mt-4 text-center text-white text-capitalize">Copyright &copy; 2023 designed by Tejas Gupta</h6>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    // Animation code or additional JavaScript code can be added here
+  </script>
+</body>
+
 </html>
